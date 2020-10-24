@@ -1,6 +1,12 @@
 package com.chris.blog.pokos
 
-class Undead(var name: String, var hitDice: Int, var totalHitPoints: Int, var currentHitPoints: Int, var attackBonus: Int, var diceNumber: Int) {
+class Undead(var name: String = "",
+             var hitDice: Int = 0,
+             var totalHitPoints: Int = 0,
+             var currentHitPoints: Int =0 ,
+             var attackBonus: Int =0,
+             var diceNumber: Int =0) {
+
 
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
