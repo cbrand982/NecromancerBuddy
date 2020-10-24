@@ -32,4 +32,15 @@ class Undead(var name: String, var hitDice: Int, var totalHitPoints: Int, var cu
         return "Undead(name='$name', hitDice=$hitDice, totalHitPoints=$totalHitPoints, currentHitPoints=$currentHitPoints, attackBonus=$attackBonus, diceNumber=$diceNumber)"
     }
 
+    fun takeDamage(dmg : Int){
+        this.currentHitPoints -= dmg
+    }
+
+    fun healDamage(dmg : Int){
+        this.currentHitPoints += dmg
+    }
+
+    fun changeTotalHP(hp : Int){
+        this.totalHitPoints == hp
+    }
 }

@@ -9,7 +9,9 @@ import com.chris.blog.pokos.Undead
 class NBController {
     @GetMapping("/")
     fun blog (model : Model): String{
-        model["title"] = Undead("Skel",1,1,1,1,1)
+        var undead = Undead("Skel",1,1,1,1,1)
+        undead.takeDamage(1)
+        model["title"] = undead
         return "blog"
     }
 }
